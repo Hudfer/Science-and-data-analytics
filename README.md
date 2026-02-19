@@ -14,6 +14,7 @@ Bivariate analysis – Exploring relationships between features and the target v
 Correlation analysis – Computing and visualizing a correlation heatmap, finding that loan_int_rate (loan interest rate) has the strongest correlation with the likelihood of default.
 
 Tools used: Python, Pandas, NumPy, Matplotlib, Seaborn.
+
 Main finding: The variable most correlated with loan default is the loan interest rate, suggesting that higher-risk borrowers are assigned higher rates and are also more likely to default.
 
 ### -DATA ANALYSIS_UBER  – Data Analysis, Visualization & Transformation with Uber Dataset
@@ -30,4 +31,25 @@ Data visualization – Creating charts and plots to explore pickup trends by bor
 Correlation analysis – Building a heatmap to examine relationships between weather variables and pickup counts, with key findings such as: dew point correlates strongly with temperature, visibility correlates negatively with precipitation, snow depth correlates negatively with temperature, and no strong relationship was found between weather conditions and the number of pickups.
 
 Tools used: Python, Pandas, NumPy, Matplotlib, Seaborn.
+
 Main takeaway: Weather conditions alone do not appear to be strong predictors of Uber demand in NYC. The analysis also reinforces the important statistical principle that correlation does not imply causation.
+
+### -CAR_ACTIVITY – Feature Engineering on a Used Car Listings Dataset (CAR_ACTIVITY)
+Course: TC4029 – Data Science and Analytics | Maestría en Inteligencia Artificial Aplicada, Tecnológico de Monterrey
+Team: José Ángel Barajas Flores, Mayra Hernández Alba, Brian Daniel López Alvarado, Francisco Daniel Valdés Escarrega
+Overview:
+This notebook applies Feature Engineering (FE) techniques to a large used car listings dataset from Craigslist, containing over 426,000 raw records and 26 features (price, year, manufacturer, model, condition, mileage, fuel type, transmission, state, and more). The goal is to clean, transform, and encode the data to produce a machine-learning-ready dataset.
+Key steps covered:
+
+Data loading and inspection – Loading the raw dataset and reviewing its structure, data types, and missing value distribution.
+Data cleaning – Dropping irrelevant columns (e.g., URLs, image links, description text), filtering rows with excessive missing values, and handling null entries to produce a cleaner working dataset.
+Outlier removal – Filtering extreme values in price and odometer to reduce noise and improve data quality, reducing the dataset to ~366,000 records.
+Feature creation – Engineering a new age variable calculated from the vehicle's year, capturing how old each car is at the time of listing.
+Numerical scaling – Applying Min-Max normalization to price, age, and odometer, storing the result in minmax_df so all values fall in the [0, 1] range.
+One-Hot Encoding – Applied to low/medium cardinality categorical variables (e.g., manufacturer, state, condition, fuel, type), stored in onehot_df.
+Binary Encoding – Applied to high-cardinality variables (model) using binary representation to reduce dimensionality, stored in binary_df.
+Final dataset assembly – Concatenating minmax_df, onehot_df, and binary_df into a single df_final with 148 columns, ready for downstream machine learning models.
+
+Tools used: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
+
+Main takeaway: Proper feature engineering, including creating meaningful new variables, removing outliers, choosing the right encoding strategy per variable, and normalizing numerical features, is essential to prepare real-world messy data for effective machine learning.
