@@ -35,8 +35,7 @@ Tools used: Python, Pandas, NumPy, Matplotlib, Seaborn.
 Main takeaway: Weather conditions alone do not appear to be strong predictors of Uber demand in NYC. The analysis also reinforces the important statistical principle that correlation does not imply causation.
 
 ### -CAR_ACTIVITY – Feature Engineering on a Used Car Listings Dataset (CAR_ACTIVITY)
-Course: TC4029 – Data Science and Analytics | Maestría en Inteligencia Artificial Aplicada, Tecnológico de Monterrey
-Team: José Ángel Barajas Flores, Mayra Hernández Alba, Brian Daniel López Alvarado, Francisco Daniel Valdés Escarrega
+Course: Data Science and Analytics
 Overview:
 This notebook applies Feature Engineering (FE) techniques to a large used car listings dataset from Craigslist, containing over 426,000 raw records and 26 features (price, year, manufacturer, model, condition, mileage, fuel type, transmission, state, and more). The goal is to clean, transform, and encode the data to produce a machine-learning-ready dataset.
 Key steps covered:
